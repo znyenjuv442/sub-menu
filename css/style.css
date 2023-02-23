@@ -1,0 +1,122 @@
+/* common css start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* common css end */
+
+body {
+    background-image: linear-gradient(to right, #659999, #f4791f);
+}
+
+
+
+
+
+nav {
+    background: linear-gradient(to right, #f4791f, #659999, #659999);
+    width: 800px;
+    font-family: arial;
+    text-transform: capitalize;
+    margin: auto;
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 30px 30px;
+    color: aliceblue;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul {
+    text-align: center;
+}
+
+
+
+nav ul li a::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+
+}
+
+
+
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+nav ul li:hover a::before {
+    width: 50%;
+}
+
+nav ul li:hover a::after {
+    width: 50%;
+}
+
+nav ul li ul {
+    position: absolute;
+    width:  150px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    margin-top: 15px;
+
+}
+
+nav ul li:hover >.sub {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+
+nav ul li ul li {
+    display: block;
+}
+
+nav .sub a {
+    border-bottom: 1px solid #659999;
+    display: block;
+    transition: 3s;
+}
+
+nav .sub .sub{
+    margin-left: 100%;
+    top: 0;
+}
